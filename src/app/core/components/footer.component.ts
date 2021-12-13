@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'lbk-footer',
   template: `
-    <footer class="fixed bottom-0 left-0 w-full">
+    <footer>
       <p class="text-center">
         Code by
         <a
