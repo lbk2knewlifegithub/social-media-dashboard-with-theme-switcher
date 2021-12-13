@@ -1,0 +1,50 @@
+<a href="#" class='relative block pt-10 pb-6 rounded shadow-sm bg-card hover:bg-card/50'>
+
+  <!--  border top line-->
+  <div *ngIf='!isInstagram else instagram'
+    class='absolute top-0 left-0 w-full h-1 {{follower.color}} rounded-tl-2xl rounded-tr-2xl'></div>
+  <!--  end border top line-->
+
+  <!--  border top line for instagram-->
+  <ng-template #instagram>
+    <div *ngIf='isInstagram' class='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-instagram-start to-instagram-end rounded-tl-2xl rounded-tr-2xl'></div>
+  </ng-template>
+  <!--  end border top line for instagram-->
+
+
+  <div class="grid space-y-6 place-items-center">
+
+    <!--  head-->
+    <div class='flex items-center gap-2'>
+      <img class='w-5 h-5' [src]='follower.srcIcon' [alt]='follower.name'>
+      <p class='font-black text-muted'>{{follower.group}}</p>
+    </div>
+    <!--  end head-->
+
+    <!--  follower amount-->
+    <div>
+      <h1 class='font-black text-center text-7xl'>{{follower.amount}}</h1>
+      <p class='text-muted uppercase tracking-[6px] text-center text-xl'>follwers</p>
+    </div>
+    <!--  end follower amount-->
+
+    <!--  increase or decrease-->
+    <div class="text-sm font-black">
+      <!--    increase-->
+      <div *ngIf='follower.increase > 0' class='flex items-center'>
+        <img src='/assets/images/icon-up.svg' alt='Up'>
+        <p class='ml-1 text-success'>{{follower.increase}} Today</p>
+      </div>
+      <!--    end increase-->
+
+      <!--    decrease-->
+      <div *ngIf='follower.decrease >0' class='flex items-center'>
+        <img src='/assets/images/icon-down.svg' alt='Down'>
+        <p class='ml-1 text-danger'>{{follower.decrease}} Today</p>
+      </div>
+      <!--    end decrease-->
+    </div>
+    <!--  end increase or decrease-->
+
+  </div>
+</a>

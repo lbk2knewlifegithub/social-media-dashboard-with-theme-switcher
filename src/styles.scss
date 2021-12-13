@@ -1,0 +1,55 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+  :root {
+    //text color
+    --text-fill: 230, 17%, 14%;
+    --text-muted: 228, 12%, 44%;
+    --text-success: 163, 72%, 41%;
+    --text-danger: 356, 69%, 56%;
+
+    //background color
+    --bg-fill: 0, 0%, 100%;
+    --bg-top-pattern: 245, 58%, 51%;
+    --bg-card: 227, 47%, 96%;
+    --bg-facebook: 208, 92%, 53%;
+    --bg-twitter: 203, 89%, 53%;
+    --bg-youtube: 348, 97%, 39%;
+    --bg-toggle: 230, 22%, 74%;
+
+    // gradient  color
+    --instagram-start: 37, 97%, 70%;
+    --instagram-end: 329, 70%, 58%;
+    --toggle-start: 210, 78%, 56%;
+    --toggle-end: 146, 68%, 55%;
+  }
+
+  .dark {
+    //text color
+    --text-fill: 0, 0%, 100%;
+    --text-muted: 228, 34%, 66%;
+    --text-success: 163, 72%, 41%;
+    --text-danger: 356, 69%, 56%;
+
+    //background color
+    --bg-fill: 230, 17%, 14%;
+    --bg-top-pattern: 228, 12%, 22%;
+    --bg-card: 228, 28%, 20%;
+    --bg-facebook: 208, 92%, 53%;
+    --bg-twitter: 203, 89%, 53%;
+    --bg-youtube: 348, 97%, 39%;
+
+    // gradient colors
+    --instagram-start: 37, 97%, 70%;
+    --instagram-end: 329, 70%, 58%;
+  }
+}
+
+@layer components {
+  .container-large {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
